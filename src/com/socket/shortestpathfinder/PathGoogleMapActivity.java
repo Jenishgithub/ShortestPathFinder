@@ -14,6 +14,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -34,9 +36,12 @@ public class PathGoogleMapActivity extends FragmentActivity {
 	GoogleMap googleMap;
 	final String TAG = "PathGoogleMapActivity";
 
+	Button btnGoBack;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		boolean net_yes_or_no = isOnline();
 		if (net_yes_or_no == false) {
 			Toast.makeText(getApplicationContext(), "NO Internet Connection",
@@ -44,6 +49,17 @@ public class PathGoogleMapActivity extends FragmentActivity {
 			finish();
 		}
 		setContentView(R.layout.activity_path_google_map);
+		btnGoBack = (Button) findViewById(R.id.btnGoBack);
+
+		btnGoBack.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				finish();
+			}
+		});
+
 		Bundle extra = getIntent().getExtras();
 		if (extra != null) {
 			mylat = extra.getDouble("mylat");

@@ -2063,13 +2063,15 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f02004a;
         public static final int common_signin_btn_text_pressed_dark=0x7f02004b;
         public static final int common_signin_btn_text_pressed_light=0x7f02004c;
-        public static final int ic_launcher=0x7f02004d;
-        public static final int ic_plusone_medium_off_client=0x7f02004e;
-        public static final int ic_plusone_small_off_client=0x7f02004f;
-        public static final int ic_plusone_standard_off_client=0x7f020050;
-        public static final int ic_plusone_tall_off_client=0x7f020051;
-        public static final int powered_by_google_dark=0x7f020052;
-        public static final int powered_by_google_light=0x7f020053;
+        public static final int elephantass=0x7f02004d;
+        public static final int ic_launcher=0x7f02004e;
+        public static final int ic_plusone_medium_off_client=0x7f02004f;
+        public static final int ic_plusone_small_off_client=0x7f020050;
+        public static final int ic_plusone_standard_off_client=0x7f020051;
+        public static final int ic_plusone_tall_off_client=0x7f020052;
+        public static final int powered_by_google_dark=0x7f020053;
+        public static final int powered_by_google_light=0x7f020054;
+        public static final int sp=0x7f020055;
     }
     public static final class id {
         public static final int action_bar=0x7f0c0045;
@@ -2085,7 +2087,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c0042;
         public static final int action_mode_bar_stub=0x7f0c0041;
         public static final int action_mode_close_button=0x7f0c0034;
-        public static final int action_settings=0x7f0c006b;
+        public static final int action_settings=0x7f0c006c;
         public static final int activity_chooser_view_content=0x7f0c0035;
         public static final int address=0x7f0c005c;
         public static final int adjust_height=0x7f0c0009;
@@ -2093,11 +2095,12 @@ containing a value of this type.
         public static final int always=0x7f0c0028;
         public static final int beginning=0x7f0c002f;
         public static final int book_now=0x7f0c0019;
-        public static final int btnClient=0x7f0c006a;
-        public static final int btnServer=0x7f0c0068;
+        public static final int btnClient=0x7f0c006b;
+        public static final int btnGoBack=0x7f0c0059;
+        public static final int btnGoBackClient=0x7f0c0065;
+        public static final int btnServer=0x7f0c0069;
         public static final int btnShowMap=0x7f0c0056;
         public static final int btnShowMapClient=0x7f0c0063;
-        public static final int btnViewLatLng=0x7f0c0057;
         public static final int buyButton=0x7f0c0015;
         public static final int buy_now=0x7f0c001a;
         public static final int buy_with_google=0x7f0c001b;
@@ -2128,14 +2131,14 @@ containing a value of this type.
         public static final int icon=0x7f0c003a;
         public static final int ifRoom=0x7f0c002a;
         public static final int image=0x7f0c0037;
-        public static final int imageView1=0x7f0c0065;
+        public static final int imageView1=0x7f0c0066;
         public static final int infoip=0x7f0c0054;
         public static final int infoport=0x7f0c0053;
         public static final int listMode=0x7f0c0020;
         public static final int list_item=0x7f0c0039;
-        public static final int llfragment=0x7f0c0058;
+        public static final int llfragment=0x7f0c0057;
         public static final int loginpanel=0x7f0c005a;
-        public static final int map=0x7f0c0059;
+        public static final int map=0x7f0c0058;
         public static final int match_parent=0x7f0c0017;
         public static final int middle=0x7f0c0031;
         public static final int monochrome=0x7f0c001f;
@@ -2170,10 +2173,10 @@ containing a value of this type.
         public static final int submit_area=0x7f0c0050;
         public static final int tabMode=0x7f0c0021;
         public static final int terrain=0x7f0c000f;
-        public static final int textView1=0x7f0c0066;
+        public static final int textView1=0x7f0c0067;
         public static final int title=0x7f0c003b;
-        public static final int tvClientorServer=0x7f0c0067;
-        public static final int tvOR=0x7f0c0069;
+        public static final int tvClientorServer=0x7f0c0068;
+        public static final int tvOR=0x7f0c006a;
         public static final int tvSuccesfulconnection=0x7f0c0062;
         public static final int up=0x7f0c0001;
         public static final int useLogo=0x7f0c0027;
@@ -2237,7 +2240,8 @@ containing a value of this type.
         public static final int clientmap=0x7f03001a;
         public static final int ifnointernet=0x7f03001b;
         public static final int serverorclient=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int splash=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;

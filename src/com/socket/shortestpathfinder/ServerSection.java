@@ -265,27 +265,6 @@ public class ServerSection extends Activity implements View.OnClickListener {
 				}
 
 				userList.remove(connectClient);
-				ServerSection.this.runOnUiThread(new Runnable() {
-
-					@Override
-					public void run() {
-						Toast.makeText(ServerSection.this,
-								connectClient.name + " removed.",
-								Toast.LENGTH_LONG).show();
-
-						msgLog += "-- " + connectClient.name + " leaved\n";
-						ServerSection.this.runOnUiThread(new Runnable() {
-
-							@Override
-							public void run() {
-								chatMsg.setText(msgLog);
-							}
-						});
-
-						// broadcastMsg("-- " + connectClient.name +
-						// " leaved\n");
-					}
-				});
 
 				// start intent to start google map here.
 
@@ -358,15 +337,25 @@ public class ServerSection extends Activity implements View.OnClickListener {
 		switch (view.getId()) {
 		case R.id.btnShowMap:
 
-			Intent igoogleMap = new Intent(getApplicationContext(),
-					PathGoogleMapActivity.class);
-			igoogleMap.putExtra("mylat", latitude);
-			igoogleMap.putExtra("mylong", longitude);
+			if ((lat_thread_str != null) && (long_thread_str != null)) {
+				Intent igoogleMap = new Intent(getApplicationContext(),
+						PathGoogleMapActivity.class);
+				igoogleMap.putExtra("mylat", latitude);
+				igoogleMap.putExtra("mylong", longitude);
 
-			igoogleMap.putExtra("hislat", Double.parseDouble(lat_thread_str));
-			igoogleMap.putExtra("hislong", Double.parseDouble(long_thread_str));
+				igoogleMap.putExtra("hislat",
+						Double.parseDouble(lat_thread_str));
+				igoogleMap.putExtra("hislong",
+						Double.parseDouble(long_thread_str));
 
-			startActivity(igoogleMap);
+				startActivity(igoogleMap);
+			} else {
+				Toast.makeText(getApplicationContext(),
+						"You are not connected to friend...",
+						Toast.LENGTH_SHORT).show();
+
+			}
+
 			break;
 
 		default:

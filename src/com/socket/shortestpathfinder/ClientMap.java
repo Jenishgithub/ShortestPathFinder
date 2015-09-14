@@ -6,13 +6,6 @@ import java.util.List;
 
 import org.json.JSONObject;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.PolylineOptions;
-
 import android.content.Context;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
@@ -20,7 +13,16 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 public class ClientMap extends FragmentActivity {
 
@@ -30,11 +32,14 @@ public class ClientMap extends FragmentActivity {
 	Double clientlat, clientlong, serverlat, serverlong;
 	LatLng CLIENT;
 	LatLng SERVER;
+	Button btnGoBackClient;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.clientmap);
+
+		btnGoBackClient = (Button) findViewById(R.id.btnGoBackClient);
 
 		boolean net_yes_or_no = isOnline();
 		if (net_yes_or_no == false) {
@@ -42,6 +47,15 @@ public class ClientMap extends FragmentActivity {
 					Toast.LENGTH_LONG).show();
 			finish();
 		}
+
+		btnGoBackClient.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish();
+			}
+		});
 
 		SupportMapFragment fm = (SupportMapFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.clientmap);
